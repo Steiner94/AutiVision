@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="bg">
+    <file>AutiSense.png</file>
+    <file>background.jpg</file>
+  </qresource>
+  <qresource prefix="setupGear">
+    <file>setup_step5.jpg</file>
+    <file>setup_step3.jpg</file>
+    <file>setup_step4.jpg</file>
+    <file>setup_step1.1.jpg</file>
+    <file>setup_step2.jpg</file>
+  </qresource>
+  <qresource prefix="eyeAnimation">
+    <file>boy peeks.png</file>
+    <file>eyeball.png</file>
+    <file>eyeLence.png</file>
+  </qresource>
+</RCC>

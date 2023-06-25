@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QStackedWidget" name="screens_stack">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1920</width>
+      <height>1080</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="main_menu">
+     <property name="styleSheet">
+      <string notr="true">QWidget#main_menu {
+border-image: url(:/bg/background.jpg) 0 0 0 0 stretch stretch;
+}</string>
+     </property>
+     <widget class="QFrame" name="main_menu_buttons">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>480</y>
+        <width>500</width>
+        <height>500</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="startExamBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent;
+    color: #007C80;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 20px;
+	transition: transform 1s ease-in-out, font-size 1s ease-in-out;
+}
+
+QPushButton:hover {
+    transform: rotate(10deg);
+	font-size: 60px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Start An Exam</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="setGearBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent;
+    color: #FBB117;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 20px;
+	transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+QPushButton:hover {
+    transform: rotate(10deg);
+	font-size: 60px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Setup Gear</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="msgCenterBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent;
+    color: #F62217;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 20px;
+	transition: transform 1s ease-in-out, font-size 1s ease-in-out;
+}
+
+QPushButton:hover {
+    transform: rotate(10deg);
+	font-size: 55px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Message Center</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exitBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent;
+    color: #6C2DC7;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 20px;
+	transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+QPushButton:hover {
+    transform: rotate(10deg);
+	font-size: 60px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Exit</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="eyeAnimation">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>160</y>
+        <width>291</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="left_eye_lens">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>48</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../icons/rec.qrc">:/eyeAnimation/eyeLence.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="right_eye_lens">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>50</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../icons/rec.qrc">:/eyeAnimation/eyeLence.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="eyeballs">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>291</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../icons/rec.qrc">:/eyeAnimation/eyeball.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <zorder>eyeballs</zorder>
+      <zorder>right_eye_lens</zorder>
+      <zorder>left_eye_lens</zorder>
+     </widget>
+     <widget class="QLabel" name="peeking_boy_label">
+      <property name="geometry">
+       <rect>
+        <x>714</x>
+        <y>110</y>
+        <width>511</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../icons/rec.qrc">:/eyeAnimation/boy peeks.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>320</y>
+        <width>491</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;
+background-color: transparent;
+color: #B2A4FF;
+font-weight: bold;
+font-size: 100px;
+font-family: &quot;Comic Sans MS&quot;, cursive;
+
+transition: transform 1s ease-in-out, font-size 1s ease-in-out;</string>
+      </property>
+      <property name="text">
+       <string>AutiVision</string>
+      </property>
+     </widget>
+     <zorder>label</zorder>
+     <zorder>peeking_boy_label</zorder>
+     <zorder>main_menu_buttons</zorder>
+     <zorder>eyeAnimation</zorder>
+    </widget>
+    <widget class="QWidget" name="start_exam_screen1">
+     <property name="styleSheet">
+      <string notr="true">QWidget#start_exam_screen1 {
+border-image: url(:/bg/background.jpg) 0 0 0 0 stretch stretch;
+}</string>
+     </property>
+     <widget class="QFrame" name="info_frame">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>150</y>
+        <width>707</width>
+        <height>761</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#info_frame{
+background-color: rgba(0, 0, 0,180);
+border: 3px solid black;
+border-radius: 25px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QFrame" name="headline1_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="headline1_label">
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #B2A4FF;
+	font-size: 50px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+}</string>
+            </property>
+            <property name="text">
+             <string>Toddler's information:</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="name_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="leftMargin">
+           <number>40</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="name_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #FFB4B4;
+	font-size: 35px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Name:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="name_lineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    font-weight: bold;
+	font-size: 35px;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+	padding-left: 10px;
+    border: 2px solid #FFB4B4;
+    border-radius: 10px;
+}
+
+QLineEdit:hover {
+    border-color: #B0E0E6; /* Pastel Green color */
+}
+
+    QLineEdit::cursor {
+        width: 4px;
+    }</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>32771</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="age_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="leftMargin">
+           <number>40</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="age_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #FFDEB4;
+	font-size: 35px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Age:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="age_lineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    font-weight: bold;
+	font-size: 35px;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+	padding-left: 10px;
+    border: 2px solid #FFDEB4;
+    border-radius: 10px;
+}
+
+QLineEdit:hover {
+    border-color: #B0E0E6; /* Pastel Green color */
+}
+
+QLineEdit::cursor {
+        width: 4px;
+    }</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="gender_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="leftMargin">
+           <number>40</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="gender_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #6E85B7;
+	font-size: 35px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Gender:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="gender_cb">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 5px;
+	font-size: 35px;
+	padding-left: 15px;
+    border: 2px solid #6E85B7;
+    border-radius: 10px;
+}
+
+QComboBox:hover {
+    border-color: #B0E0E6; /* Pastel Green color */
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 25px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: transparent;
+}</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Male</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Female</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="contact_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="contact_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #007C80;
+	font-size: 40px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+}</string>
+            </property>
+            <property name="text">
+             <string>Contact information:</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="email_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="leftMargin">
+           <number>40</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="email_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #6C2DC7;
+	font-size: 35px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Email:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="email_lineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+	padding-left: 10px;
+	font-size: 35px;
+    border: 2px solid #6C2DC7;
+    border-radius: 10px;
+}
+
+QLineEdit:hover {
+    border-color: #B0E0E6; /* Pastel Green color */
+}
+
+QLineEdit::cursor {
+        width: 4px;
+    }</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QCheckBox" name="checkBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QCheckBox {
+    color: #AAC4FF;
+    font-weight: bold;
+	font-size: 23px;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+
+	margin-left: 21px
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>I have read and agreed to the</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="terms_condition_btn">
+            <property name="font">
+             <font>
+              <family>Comic Sans MS,cursive</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">    color: #AAC4FF;
+    font-weight: bold;
+	font-size: 23px;
+	text-decoration: underline;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+	margin-right: 26 px;
+    background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>terms and conditions</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="start_exam_frame">
+      <property name="geometry">
+       <rect>
+        <x>1410</x>
+        <y>870</y>
+        <width>341</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QPushButton" name="start_exam_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton#start_exam_btn {
+    background-color: #F3D8FF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+	font-size: 40px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+}
+
+QPushButton:hover#start_exam_btn {
+    background-color: #F6EEA1;
+	font-size: 50px;
+}
+
+
+QFrame#start_exam_btn {
+    border: 2px dashed #FFA4D1;
+    border-radius: 10px;
+}</string>
+         </property>
+         <property name="text">
+          <string>Start</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="start_exam_screen2">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <widget class="QWidget" name="videoWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1920</width>
+        <height>1080</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="exam_results">
+     <property name="styleSheet">
+      <string notr="true">QWidget#exam_results {
+border-image: url(:/bg/background.jpg) 0 0 0 0 stretch stretch;
+}</string>
+     </property>
+     <widget class="QFrame" name="results_frame">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>220</y>
+        <width>1031</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#results_frame{
+background-color: rgba(0, 0, 0,180);
+border: 3px solid black;
+border-radius: 25px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="headline">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>421</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Comic Sans MS,cursive</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #FFDEB4;
+	font-size: 40px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 10px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Observation is Done</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="email_sent_label">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>150</y>
+         <width>931</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Comic Sans MS,cursive</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #FFDEB4;
+	font-size: 28px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 10px;
+}</string>
+       </property>
+       <property name="text">
+        <string>We have sent an email with the results to </string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="direct_donwload_frame">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>250</y>
+         <width>931</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="directD_label">
+          <property name="font">
+           <font>
+            <family>Comic Sans MS,cursive</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: #FFDEB4;
+	font-size: 28px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+    padding: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>Alternatively, the results can be downloaded here:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="donwloadPDF_button">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: #F3D8FF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+	font-size: 20px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+}
+
+QPushButton:hover {
+    background-color: #FFDEB4;
+}
+
+QPushButton:pressed {
+    background-color: #F8A1C6;
+}
+
+QFrame {
+    border: 2px dashed #FFA4D1;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>Download PDF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="main_menu_frame">
+      <property name="geometry">
+       <rect>
+        <x>1410</x>
+        <y>870</y>
+        <width>341</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QPushButton" name="main_menu_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #F3D8FF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+	font-size: 40px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+}
+
+QPushButton:hover {
+    background-color: #F6EEA1;
+	font-size: 50px;
+}
+
+QPushButton:pressed {
+    background-color: #F8A1C6;
+	font-size: 50px;
+}
+
+QFrame {
+    border: 2px dashed #FFA4D1;
+    border-radius: 10px;
+}</string>
+         </property>
+         <property name="text">
+          <string>Main Menu</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="terms_condition_screen">
+     <property name="styleSheet">
+      <string notr="true">QWidget#terms_condition_screen {
+border-image: url(:/bg/background.jpg) 0 0 0 0 stretch stretch;
+}</string>
+     </property>
+     <widget class="QTextEdit" name="terms_condition_textEdit">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>230</y>
+        <width>1161</width>
+        <height>631</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit{
+background-color: rgba(0, 0, 0,50);
+border: 3px solid black;
+border-radius: 25px;
+padding-left: 20px;
+padding-right: 20px;
+}</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; text-decoration: underline;&quot;&gt;Terms and Conditions Agreement&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;This Terms and Conditions Agreement (the &amp;quot;Agreement&amp;quot;) is a legal agreement between you (the &amp;quot;User&amp;quot;) and AutiVision (the &amp;quot;Company&amp;quot;), governing your use of the eyetracking program (the &amp;quot;Program&amp;quot;) and the associated AI algorithm (the &amp;quot;Algorithm&amp;quot;). By accessing or using the Program, you agree to be bound by the terms and conditions set forth in this Agreement.&lt;/span&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-size:14pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20px;&quot;&gt;Acceptance of Terms By using the Program, you acknowledge that you have read, understood, and agreed to be bound by the terms and conditions of this Agreement. If you do not agree with any of the terms and conditions, you must not use the Program.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-size:14pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20px;&quot;&gt;User Consent 2.1 User Consent for Eyetracking In order to use the Program, you hereby provide your explicit consent for the Program to access and use your eyetracking data. The Program will use an eyetracker device to monitor your eye movements and collect data during the diagnostic process.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;2.2 User Consent for AI Algorithm You also acknowledge and consent to the use of the AI algorithm to analyze and interpret your eyetracking data in order to generate results. The Algorithm uses advanced artificial intelligence techniques to provide accurate and reliable diagnostic information.&lt;/span&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-size:14pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20px;&quot;&gt;Data Collection and Privacy 3.1 Data Collection The Program will collect and store your eyetracking data, including but not limited to eye movement patterns, gaze direction, and pupil dilation. This data will be used solely for the purpose of generating accurate diagnostic results.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;3.2 Data Privacy and Security The Company is committed to protecting your privacy and ensuring the security of your data. All collected data will be handled in accordance with our Privacy Policy, which is hereby incorporated into this Agreement. The Privacy Policy outlines the types of data collected, how it is used, and how it is protected.&lt;/span&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-size:14pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20px;&quot;&gt;Diagnostic Results 4.1 Accuracy of Results While the Algorithm strives to provide accurate diagnostic results, it is important to note that the Program's results are generated based on AI analysis and should not be considered as a substitute for professional medical advice. The Program is intended to assist healthcare professionals in their diagnostic process.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;4.2 Reliance on Results The Company shall not be held liable for any decisions made by the User or any third party based on the Program's diagnostic results. The User assumes all responsibility for the interpretation and use of the results.&lt;/span&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-size:14pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20px;&quot;&gt;Intellectual Property 5.1 Ownership The Program and the Algorithm, including all associated intellectual property rights, are owned and retained by the Company. This Agreement does not grant the User any ownership rights to the Program or the Algorithm.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;5.2 License The Company grants the User a limited, non-exclusive, non-transferable license to use the Program and the Algorithm solely for personal use and in accordance with this Agreement. The User may not modify, copy, distribute, sublicense, or reverse engineer the Program or the Algorithm.&lt;/span&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-size:14pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20px;&quot;&gt;Limitation of Liability To the extent permitted by applicable law, the Company shall not be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in connection with the use or inability to use the Program, even if the Company has been advised of the possibility of such damages.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-size:14pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20px;&quot;&gt;Termination The Company reserves the right to terminate this Agreement and suspend or revoke the User's access to the Program at any time without prior notice, for any reason or no reason. Upon termination, the User must cease all use of the Program and delete any copies of the Program in their possession.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-size:14pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20px;&quot;&gt;Governing Law and Jurisdiction This Agreement shall be governed by and construed in accordance with the laws of Jurisdiction. Any disputes arising out of or relating to this Agreement shall be subject to the exclusive jurisdiction of the courts&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="start_exam_frame_2">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>890</y>
+        <width>341</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="QPushButton" name="back_start_exam1_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton#back_start_exam1_btn {
+    background-color: #F3D8FF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+	font-size: 40px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+}
+
+QPushButton:hover#back_start_exam1_btn {
+    background-color: #F6EEA1;
+	font-size: 50px;
+}
+
+
+QFrame#start_exam_btn {
+    border: 2px dashed #FFA4D1;
+    border-radius: 10px;
+}</string>
+         </property>
+         <property name="text">
+          <string>Back</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="message_center_screen"/>
+    <widget class="QWidget" name="setup_gear_screen">
+     <property name="styleSheet">
+      <string notr="true">QWidget#setup_gear_screen {
+border-image: url(:/bg/background.jpg) 0 0 0 0 stretch stretch;
+}</string>
+     </property>
+     <widget class="QTextEdit" name="terms_condition_textEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>40</y>
+        <width>1391</width>
+        <height>941</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit{
+background-color: rgba(255, 255, 255,200);
+border: 3px solid black;
+border-radius: 25px;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+}</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600;&quot;&gt;Setup Eye Tracker Software &amp;amp; Gear&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:36pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt; text-decoration: underline;&quot;&gt;Step 1:&lt;/span&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt; Download 'Tobii Eye Tracker 4c Core Software' &lt;/span&gt;&lt;a href=&quot;https://gaming.tobii.com/getstarted/&quot;&gt;&lt;span style=&quot; font-size:22pt; text-decoration: underline; color:#0000ff;&quot;&gt;From here&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:26pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/setupGear/setup_step1.1.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt; text-decoration: underline;&quot;&gt;Step 2:&lt;/span&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt; Install 'Tobii Eye Tracker 4c' Application&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:22pt; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/setupGear/setup_step2.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt; text-decoration: underline;&quot;&gt;Step 3:&lt;/span&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt; Reach the tobii Eyetracking appication &amp;amp; click 'Display Setup'&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:22pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/setupGear/setup_step4.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt; text-decoration: underline;&quot;&gt;Step 4:&lt;/span&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt; Follow the instructions&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:22pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/setupGear/setup_step3.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt; text-decoration: underline;&quot;&gt;Step 5:&lt;/span&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt; Test &amp;amp; Improve Calibration&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:22pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/setupGear/setup_step5.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:22pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="start_exam_frame_3">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>890</y>
+        <width>341</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <widget class="QPushButton" name="back_start_exam1_btn_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #F3D8FF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+	font-size: 40px;
+    font-weight: bold;
+    font-family: &quot;Comic Sans MS&quot;, cursive;
+}
+
+QPushButton:hover {
+    background-color: #F6EEA1;
+	font-size: 50px;
+}
+
+
+QFrame {
+    border: 2px dashed #FFA4D1;
+    border-radius: 10px;
+}</string>
+         </property>
+         <property name="text">
+          <string>Back</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../icons/rec.qrc"/>
+ </resources>
+ <connections/>
+</ui>

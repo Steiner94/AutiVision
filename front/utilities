@@ -1,0 +1,15 @@
+from PyQt5.QtWidgets import QMessageBox, QApplication
+
+
+def pop_error_message(main_text, title_text):
+
+    app = QApplication([])
+    # create a QMessageBox object with the appropriate icon and message text
+
+    msg_box = QMessageBox()
+    msg_box.setIcon(QMessageBox.Critical)
+    msg_box.setText(main_text)
+    msg_box.setWindowTitle(title_text)
+
+    # display the message box
+    msg_box.exec_()
