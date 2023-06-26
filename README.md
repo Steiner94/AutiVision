@@ -8,8 +8,6 @@ Autivision is a computer vision-based system for autism spectrum disorder (ASD) 
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 - [Support and Contact](#support-and-contact)
 
 ## Introduction
@@ -18,7 +16,7 @@ Autivision is designed to assist in the early detection and assessment of ASD in
 
 ## Features
 
-- Eye tracking: Capture and analyze eye gaze data to identify patterns and fixations.
+- Eye tracking: Capture and analyze eye gaze data to identify patterns and fixations Using *Tobii Eye Tracker 4*
 - Facial expression analysis: Detect and interpret facial expressions for emotional recognition.
 - Behavioral assessment: Evaluate specific behaviors and interactions relevant to ASD diagnosis.
 - Data visualization: Generate visual reports and heatmaps for easy interpretation of results.
