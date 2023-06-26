@@ -1,0 +1,7 @@
+PyPDF2==3.0.1
+PyQt5==5.15.9
+PyQt5_sip==12.11.1
+python_vlc==3.0.18122
+pywin32==305
+svm==0.1.0
+validations==0.1.1
